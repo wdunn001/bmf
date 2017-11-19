@@ -1,0 +1,6 @@
+<p>
+  {{builderState$ | async}}
+</p>
+
+<input #characterName type="text" [(ngModel)]="selectedCharacter.name" (keyup)="updateCharacter()">
+<button (click)="submit($event, characterName.value)"></button>
